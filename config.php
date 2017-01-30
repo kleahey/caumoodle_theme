@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
 // as the directory name for our theme.
 $THEME->name = 'CAUniversity';
 
-// This setting list the style sheets we want to include in our theme. Because we want to use SCSS instead of CSS - we won't        
+// This setting list the style sheets we want to include in our theme. Because we want to use SCSS instead of CSS - we won't
 // list any style sheets. If we did we would list the name of a file in the /style/ folder for our theme without any css file
 // extensions.
 $THEME->sheets = [];
@@ -66,3 +66,9 @@ $THEME->requiredblocks = '';
 // This is a feature that tells the blocks library not to use the "Add a block" block. We don't want this in boost based themes because
 // it forces a block region into the page when editing is enabled and it takes up too much room.
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+
+// This is the function that returns the SCSS source for the main file in our theme. We override the boost version because
+// we want to allow presets uploaded to our own theme file area to be selected in the preset list.
+$THEME->scss = function($theme) {
+    return theme_cauniversity_get_main_scss_content($theme);
+};

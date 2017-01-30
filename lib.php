@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 
 // We will add callbacks here as we add features to our theme.
 
-function theme_photo_get_main_scss_content($theme) {
+function theme_cauniversity_get_main_scss_content($theme) {
     global $CFG;
 
     $scss = '';
