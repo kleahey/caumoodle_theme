@@ -33,7 +33,7 @@ $plugin->requires = '2016112900';
 
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
-$plugin->component = 'theme_cauniversity';
+$plugin->component = 'theme_CAUniversity';
 
 // This is a list of plugins, this plugin depends on (and their versions).
 $plugin->dependencies = [
